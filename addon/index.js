@@ -1,9 +1,8 @@
 import Ember from 'ember';
-import WeakMap from 'ember-weakmap';
 
 const { Object: EmberObject, computed, A, isNone, getOwner } = Ember;
 
-const PROPERTIES = new WeakMap();
+const PROPERTIES = new Ember.WeakMap();
 
 function findOrCreatePropertyInstance(propertyClass, context, key) {
   let propertiesForContext = PROPERTIES.get(context);
